@@ -1,0 +1,35 @@
+# ROS 2 / colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary / backup files
+*.backup
+*.backup2
+*.bak
+*~
+
+# Generated ROS / debugging files
+frames_*.gv
+frames_*.pdf
+
+# ROS bags
+*.bag
+*.db3
+
+# Large temporary files
+*.tmp

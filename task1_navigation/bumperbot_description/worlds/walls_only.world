@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="walls_only">
+
+    <gravity>0 0 -9.8</gravity>
+
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- FLOOR -->
+    <model name="floor">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 12 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 12 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <pose>0 0 -0.05 0 0 0</pose>
+    </model>
+
+    <!-- NORTH WALL -->
+    <model name="wall_north">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 1.5</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <pose>0 6 0.75 0 0 0</pose>
+    </model>
+
+    <!-- SOUTH WALL -->
+    <model name="wall_south">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 1.5</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <pose>0 -6 0.75 0 0 0</pose>
+    </model>
+
+    <!-- EAST WALL -->
+    <model name="wall_east">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 12 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 12 1.5</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <pose>6 0 0.75 0 0 0</pose>
+    </model>
+
+    <!-- WEST WALL -->
+    <model name="wall_west">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 12 1.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 12 1.5</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+      <pose>-6 0 0.75 0 0 0</pose>
+    </model>
+
+    <!-- LIGHT -->
+    <light name="ceiling_light" type="point">
+      <pose>0 0 5 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>30</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
+  </world>
+</sdf>
